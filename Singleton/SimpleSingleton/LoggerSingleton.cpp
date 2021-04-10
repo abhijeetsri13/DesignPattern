@@ -1,11 +1,30 @@
 #include<iostream>
 #include"LoggerSingleton.h"
+#include<string>
+
+LoggerSingleton* LoggerSingleton::LoggerObj=NULL;
 
 void LoggerSingleton::Log(std::string &data)
 {
-    std::cout<<data<<std::endl;
+   std::cout<<data<<std::endl;
 }
-LoggerSingleton* LoggerSingleton::LoggerObj=NULL;
+
+
+void LoggerSingleton::Log(std::wstring &data)
+{
+    std::cout<<data.c_str()<<std::endl;
+}
+
+LoggerSingleton::LoggerSingleton()
+{
+    std::cout<<"Constructing Logger"<<std::endl;
+}
+
+LoggerSingleton& LoggerSingleton::operator=(const LoggerSingleton&){ 
+    return *this; 
+}
+
+
 
 LoggerSingleton* LoggerSingleton::getLoger()
 {
@@ -13,5 +32,5 @@ LoggerSingleton* LoggerSingleton::getLoger()
         {
             LoggerObj = new LoggerSingleton();
         }
-        return LoggerObj;
+    return LoggerObj;
 }
