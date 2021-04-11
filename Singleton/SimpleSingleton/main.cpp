@@ -2,7 +2,6 @@
 #include"LoggerSingleton.h"
 #include<string>
 
-//LoggerSingleton* LoggerSingleton::LoggerObj=NULL;
 int main()
 {
     LoggerSingleton *Log= LoggerSingleton::getLoger();
