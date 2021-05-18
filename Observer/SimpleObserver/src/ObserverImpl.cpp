@@ -18,7 +18,7 @@ ObserverImpl::ObserverImpl(SubjectImpl &obj): mySubject(obj)
 //}
 void ObserverImpl::Update(const std::string &update)
 {
-	std::cout<<update<<std::endl;
+	std::cout<<update<<" In the Observer "<< this->current_observer<<std::endl;
 }
 
 void ObserverImpl::RemoveAsObserver()

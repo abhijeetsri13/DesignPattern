@@ -9,6 +9,6 @@ class IObserver
 {
 public:
 	virtual ~IObserver(){};
-	virtual void Update(const std::string &update);
+	virtual void Update(const std::string &update)=0;
 };
 #endif

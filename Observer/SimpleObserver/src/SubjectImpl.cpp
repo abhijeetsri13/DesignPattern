@@ -5,7 +5,7 @@
 void SubjectImpl::DoActivity(std::string activity)
 {
 	m_message = activity;
-	std::cout<<m_message<<std::endl;
+	std::cout<<m_message<<" In the Subject "<<std::endl;
 	Notify(m_message);	
 }
 
